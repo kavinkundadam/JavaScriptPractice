@@ -5,18 +5,18 @@ class Person {
     }
 }
 
-const me = new Person();
-const you = new Person();
-console.log(me.talk());
-console.log(you.talk());
-console.log(you);
+const someone = new Person();
+const otherone = new Person();
+console.log(someone.talk());
+console.log(otherone.talk());
+console.log(otherone);
 
 console.log(Object.prototype.constructor === Object);
 
 Person.prototype.greet = function() {
     return "Hi, Welcome to web Programming with pk";
 }
-console.log(me.greet());
+console.log(someone.greet());
 
 // Getter & Setter
 class Person1 {
@@ -34,11 +34,11 @@ class Person1 {
         this.name = newName;
     }
 }
-let person = new Person1("Kavin Manudheeran");
-console.log(person); // show's that object fully
+let onePerson = new Person1("Kavin Manudheeran");
+console.log(onePerson); // show's that object fully
 // console.log(person.getName()); // Kavin Manudheeran
 person.setName("Magil Mithra");
-console.log(person.getName()); //Magil Mithra
+console.log(onePerson.getName()); //Magil Mithra
 
 // Get & Set by keyword
 class Person2 {
