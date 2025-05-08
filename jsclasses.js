@@ -98,4 +98,3 @@ class Person4 {
 let nextPerson = new Person4("Kavin", "Kundadam");
 //console.log(nextPerson.fullName()); 
 /*Uncaught TypeError: nextPerson.fullName is not a "function"*/
- 
