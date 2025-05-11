@@ -37,3 +37,20 @@ else {
 
 //Functions
 
+// Objects -> Multiple values together
+const product = {
+    productName : "Mobile",
+    productBrand : "Samsung",
+    productPrice : "$50"
+};
+
+console.log(product);
+console.log(product.productName);
+
+product.productName = 'Mobile Phone';
+console.log(product);
+
+console.log(JSON.stringify( product)); // DOes not return function!
+
+
+
