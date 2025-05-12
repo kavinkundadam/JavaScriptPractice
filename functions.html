@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <button onclick="" class = "js-button"> Click </button>
+    <script>
+        // document.querySelector('.js-button');
+        // buttonElement.addEventListener('click', () => {
+        //     console.log('click');
+        // });
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            console.log('click');
+        };
+        buttonElement.addEventListener('click', eventListener);
+
+        buttonElement.removeEventListener('click',eventListener);
+
+        buttonElement.addEventListener('click', () => {
+            console.log('click2');
+        });
+
+        //Hoisting
+        greeting(); // Calls function before it called is hoisting
+        function greeting() {
+            console.log("Hello!");
+        }
+        greeting();
+
+        const num = 1; // Functions are values
+        const function1 = function() { //Anoynomus function -> Function without name
+            console.log("Hi");
+        };
+        console.log(function1);
+        function1();
+
+        const object = {
+            num : 1,
+            fun : function() { // Method -> Function saved inside an object
+                console.log(`Hi`);
+            }
+        };
+        object.fun()
+
+        function run(param) {
+            param();
+        }
+        run(function() {
+            console.log("Hello, Programming!"); // Callback it is!
+        });
+
+        // setTimeout(function() {
+        //     alert("Timeout");
+        // },2000);
+
+        // setInterval(function() {
+        //     console.log("Interval");
+        // },2000);
+
+        console.log("Next line");
+
+        // Arrow function
+
+        const arrowFunction = () => {
+            console.log("Hi");
+        };
+        arrowFunction();
+
+        const oneParam = param => {
+            console.log(param + 1);
+        }
+        oneParam(2);
+
+        const oneline = () => 4+2;
+        console.log(oneline());
+
+        const object1 = {
+            method: () => {
+                //Shortand 
+            },
+            method() {
+                // Regular -> "Recommended"
+            }
+        };
+    </script>
+</body>
+</html>
