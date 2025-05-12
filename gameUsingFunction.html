@@ -28,7 +28,18 @@
           Losses: ${score.losses}, Ties: ${score.ties}`;
     ">Reset Score</button>
 
+    <button class="autoPlayButton" onclick="
+    autoPlay();
+    ">Autoplay</button>
+
     <script>
+      function autoPlay() {
+        setInterval(function() {
+          const playerMove = pickComputerMove();
+          playGame(playerMove);
+        },5000);
+      }
+
       let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0,
