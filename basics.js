@@ -52,5 +52,9 @@ console.log(product);
 
 console.log(JSON.stringify( product)); // DOes not return function!
 
+// Arrays
 
-
+let myArray = [1, 'Hello', {name : "kavin"}, 98 , [1,2]];
+console.log(myArray);
+myArray.splice(3,98);
+console.log(myArray);
