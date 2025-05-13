@@ -6,7 +6,7 @@
     <title>Functions</title>
 </head>
 <body>
-    <button onclick="" class = "js-button"> Click </button>
+    <button onclick="" class = "js-button"> Click </button> <!-- HTML -->
     <script>
         // document.querySelector('.js-button');
         // buttonElement.addEventListener('click', () => {
@@ -32,7 +32,7 @@
         }
         greeting();
 
-        const num = 1; // Functions are values
+        const num = 1; // Functions are values, so here we save this in function1 variable name
         const function1 = function() { //Anoynomus function -> Function without name
             console.log("Hi");
         };
@@ -54,9 +54,9 @@
             console.log("Hello, Programming!"); // Callback it is!
         });
 
-        // setTimeout(function() {
-        //     alert("Timeout");
-        // },2000);
+        setTimeout(function() {
+            console.log("Timeout");
+        },2000);
 
         // setInterval(function() {
         //     console.log("Interval");
