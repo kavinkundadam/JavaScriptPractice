@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart quantity</title>
+    <style>
+        .time-button{
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <p>
@@ -22,7 +27,13 @@
     <button onclick="
         cartQuantity = 0;
         console.log(`Cart was reset`);
-        console.log(`Cart Quantity : ${cartQuantity}`)"> Reset </button>
+        console.log(`Cart Quantity : ${cartQuantity}`)"> Reset </button> <br>
+
+    <button onclick="
+        document.getElementById('time-para').innerText = Date();
+    " class="time-button"> The Time? </button>
+
+    <p id="time-para"> </p>
 
     <script src="basics.js">
         let cartQuantity = 0;
