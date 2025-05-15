@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p> Objects</p>
+    <p id="demo"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age:50,
+            eyeColor: "blue"
+        };
+
+        const x = person;
+
+        x.age = 10;
+
+        document.querySelector("#demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+</body>
+</html>

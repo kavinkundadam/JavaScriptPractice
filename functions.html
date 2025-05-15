@@ -7,7 +7,10 @@
 </head>
 <body>
     <button onclick="" class = "js-button"> Click </button> <!-- HTML -->
-    <script>
+    <h1 class="countdown">
+
+    </h1>
+    <script src="function.js">
         // document.querySelector('.js-button');
         // buttonElement.addEventListener('click', () => {
         //     console.log('click');
@@ -54,9 +57,9 @@
             console.log("Hello, Programming!"); // Callback it is!
         });
 
-        setTimeout(function() {
-            console.log("Timeout");
-        },2000);
+        // setTimeout(function() {
+        //     console.log("Timeout");
+        // },2000);
 
         // setInterval(function() {
         //     console.log("Interval");
@@ -87,6 +90,76 @@
                 // Regular -> "Recommended"
             }
         };
+
+        function sum(...args) {
+        
+        for (const a of args) {
+            total += a;
+        }
+        return total;
+        }
+        let total = 0;
+        sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        console.log(total);
+
+        // setTimeout(function timeOut() {
+        //     console.log("3");
+        // },1000);
+        // setTimeout(() => {
+        //     console.log("2");
+        // } ,2000);
+        // setTimeout(() => {
+        //     console.log("1");
+        // } ,3000);
+
+        // Did - resolve(), Didn't - reject(); 
+        // fulfilled
+        // pending - Default
+        // rejected
+
+        // const myPromise = new Promise(); // Not a function, its a constructor.
+        // console.log(myPromise);
+
+        // new Promise((resolve, reject) => {
+            // Syntax
+        // })
+
+        let orderCoffee = new Promise((resolve, reject) => { // JS runtime environment defaultly gives the resolve and reject parameter
+            const machineWorks = true;
+            setTimeout(() => {
+                if (machineWorks) {
+                    // Get coffee (Did - resolve())
+                    const orderDetails = { 
+                        amount : 50,
+                        quantity : "250ml"
+                    }
+                    resolve({message: 'Get the coffee', orderDetails});
+                } else {
+                    // ask for another order (Didn't - reject())
+                    reject('Machine not working!')
+                }                
+            }, 2000); 
+        })
+
+        console.log(orderCoffee);
+
+        orderCoffee.then((result) => { // if succeed it runs
+            console.log(result.message);
+            console.log('Order details : Rs-' + result.orderDetails.amount + ' '+ result.orderDetails.quantity);
+
+            return new Promise((resolve, reject) => {
+                resolve(`Here is the bill : Rs-${result.orderDetails.amount}`);
+            })
+        })
+        .then((billInfo) => {
+            console.log(billInfo);
+        })
+        .catch((result)=> { // if fails it runs
+             console.log(result);
+        }).finally(() => { // runs all time 
+            console.log("Thanks for visiting");
+        }) 
+        
     </script>
 </body>
 </html>

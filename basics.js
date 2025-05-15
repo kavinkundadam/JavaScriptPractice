@@ -58,3 +58,6 @@ let myArray = [1, 'Hello', {name : "kavin"}, 98 , [1,2]];
 console.log(myArray);
 myArray.splice(3,98);
 console.log(myArray);
+
+// Declaration for show cart quantity events
+let cartQuantity = 0;
